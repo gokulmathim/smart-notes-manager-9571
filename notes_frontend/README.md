@@ -10,6 +10,7 @@ This is a React (Vite) frontend converted from the original Astro template. It p
 
 - npm install
 - npm start          # Start dev server on http://localhost:3000
+- npm run dev        # Alias for starting the dev server
 - npm run build      # Production build
 - npm run preview    # Preview the build
 - npm run lint       # Lint project

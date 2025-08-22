@@ -6,6 +6,7 @@
   "description": "React frontend for Smart Notes Manager, converted from Astro.",
   "scripts": {
     "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
