@@ -1,47 +1,42 @@
-# Astro Starter Kit: Minimal
+# Smart Notes Manager - React Frontend
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This is a React (Vite) frontend converted from the original Astro template. It preserves the design language (theme toggle, background blur, modern light style) and provides scaffolding for the main user flows:
+- User authentication (login/signup scaffold)
+- Notes CRUD (client-side for now)
+- Search and tagging
+- Responsive layout with sidebar (navigation/tags), header (search/profile), and main content
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Scripts
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- npm install
+- npm start          # Start dev server on http://localhost:3000
+- npm run build      # Production build
+- npm run preview    # Preview the build
+- npm run lint       # Lint project
 
-## 🚀 Project Structure
+## Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+- index.html
+- src/
+  - main.tsx (entry)
+  - App.tsx (router + layout)
+  - styles/global.css (theme variables and layout)
+  - components/
+    - ThemeToggle.tsx
+    - BackgroundBlur.tsx
+    - layout/
+      - Header.tsx
+      - Sidebar.tsx
+      - Layout.tsx
+  - pages/
+    - AuthPage.tsx
+    - NotesPage.tsx
+  - assets/
+    - background.svg
+    - astro.svg (example asset)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Next steps
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Wire authentication and notes CRUD to backend via HTTP REST.
+- Replace client-side state with calls to backend services and add proper error handling and loading states.
+- Implement persistent storage for notes and tags once the backend API is ready.
